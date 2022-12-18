@@ -1,0 +1,5 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "mixins.scss";
+@import "variables";
+$theme-colors: map-merge($theme-colors, $custom-theme-colors); 
+$grid-breakpoints: map-merge($grid-breakpoints, $custom-breakpoints);

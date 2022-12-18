@@ -7,7 +7,9 @@ const browserSync = require('browser-sync').create();
 
 const views = () => {
   return src('./app/*.pug')
-    .pipe(pug())
+    .pipe(pug({
+        pretty: true,
+    }))
     .pipe(dest('./build'))
 }
 
