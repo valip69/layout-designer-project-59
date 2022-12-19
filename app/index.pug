@@ -1,4 +1,4 @@
-
+//
 -
     var contacts = {
         "A": [{
@@ -35,7 +35,7 @@
             status: "Был онлайн вчера",
             avatar: "/images/avatar_6.jpg"
         }],
-    }
+    }//
 doctype html
 html(lang="en")
     head
@@ -45,17 +45,27 @@ html(lang="en")
         link(rel="stylesheet", href="./styles.css")
         title Document
     body
-        .container-xxl .b-"gray" .br-3
-         
+        .container-xxl          
             .row 
                 .col-4 
                     .nav 
-                        include app/header.pug
+                       header  
+                            img(src="logo.png")
+                            div
+                                a( href="") 
+                                    img(src="./images/people 2.png")
+                                    span Контакты
+                                a( href="")  
+                                    img(src="chat 2.png")
+                                    span Сообщения
+                                a( href="") 
+                                    img(src="person 2.png")
+                                    span Профиль
             .row 
                 .col-4 
                     aside 
                         h2 .h2 .py-5 .px-4 
-                            "Контакты"
+                            Контакты
                             span Поиск по контактам
             
                         
