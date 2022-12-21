@@ -44,16 +44,16 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="./styles.css")
         title Document
-    body
-        .container-xxl          
-            .row 
-                .col-4 
+    body.m-4.bg-dark 
+        .container-xxl.container-fluid.rounded-3.bg-white          
+            .row  
+                .col-4.px-0  
                     include header.pug
             .row 
                 .col-4 
                     aside 
                         h2.py-5.px-4 Контакты
-                            span.text-muted Поиск по контактам
+                        p.text-muted Поиск по контактам
                             each people, letter in contacts
                                 h6= letter
                                 ul
@@ -61,9 +61,9 @@ html(lang="en")
                                         li.h6= contact.name
                                         li.small.text-mited= contact.status
                                         li= contact.avatar         
-                .col-4 
-                    main 
-                        img(src="avatar_1 1.png", alt="")
+                .col-4.m-auto 
+                    main   
+                        img(src="./images/avatar_1 1.png", alt="1")
                         h6 Привет, Кодовёнок
                         small.text-muted Выбери чат, чтобы начать общаться
             
