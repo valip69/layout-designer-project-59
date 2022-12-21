@@ -48,25 +48,24 @@ html(lang="en")
         .container-xxl          
             .row 
                 .col-4 
-                    .nav 
-                       header  
-                            img(src="logo.png")
-                            div
-                                a( href="") 
-                                    img(src="./images/people 2.png")
-                                    span Контакты
-                                a( href="")  
-                                    img(src="chat 2.png")
-                                    span Сообщения
-                                a( href="") 
-                                    img(src="person 2.png")
-                                    span Профиль
+                    include header.pug
             .row 
                 .col-4 
                     aside 
-                        h2 .h2 .py-5 .px-4 
-                            Контакты
-                            span Поиск по контактам
+                        h2.py-5.px-4 Контакты
+                            span.text-muted Поиск по контактам
+                            each people, letter in contacts
+                                h6= letter
+                                ul
+                                    each contact in people
+                                        li.h6= contact.name
+                                        li.small.text-mited= contact.status
+                                        li= contact.avatar         
+                .col-4 
+                    main 
+                        img(src="avatar_1 1.png", alt="")
+                        h6 Привет, Кодовёнок
+                        small.text-muted Выбери чат, чтобы начать общаться
             
                         
 
