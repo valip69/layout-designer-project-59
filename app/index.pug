@@ -4,36 +4,36 @@
         "A": [{
             name: "Алексей Примадонин",
             status: "Онлайн",
-            avatar: "/images/avatar_3.jpg"
+            avatar: "images/Avatar_3.svg"
         }],
 
         "В": [{
             name: "Вениамин Редакторович",
             status: "Онлайн",
-            avatar: "/images/avatar_4.jpg"
+            avatar: "images/avatar_4.jpg"
         }],
 
         "Д": [{
             name: "Джедай Падаванов",
             status: "Был онлайн вчера",
-            avatar: "/images/avatar_2.jpg"
+            avatar: "images/avatar_2.jpg"
         }],
 
         "К": [{
             name: "Кодовёнок Хекслетович",
             status: "Был онлайн 3 часа назад",
-            avatar: "/images/avatar_1.jpg"
+            avatar: "images/avatar_1.jpg"
         },
         {
             name: "Королева Верстальщина",
             status: "Была онлайн вчера",
-            avatar: "/images/avatar_5.jpg"
+            avatar: "images/avatar_5.jpg"
         }],
 
         "П": [{
             name: "Питонист Джангович",
             status: "Был онлайн вчера",
-            avatar: "/images/avatar_6.jpg"
+            avatar: "images/avatar_6.jpg"
         }],
     }//
 doctype html
@@ -52,18 +52,19 @@ html(lang="en")
             .row 
                 .col-4 
                     aside 
-                        h2.py-5.px-4 Контакты
-                        p.text-muted Поиск по контактам
-                            each people, letter in contacts
-                                h6= letter
-                                ul
-                                    each contact in people
-                                        li.h6= contact.name
-                                        li.small.text-mited= contact.status
-                                        li= contact.avatar         
+                            h2.py-5.px-4 Контакты
+                            p.text-muted Поиск по контактам
+                        each people, letter in contacts
+                        h6= letter
+                    .card
+                        .card-body
+                        img(src="contact.avatar", alt="1")
+                            each contact in people
+                                h6.card-title= contact.name
+                                p.card-text.small.text-mited= contact.status        
                 .col-4.m-auto 
                     main   
-                        img(src="./images/avatar_1 1.png", alt="1")
+                        img(src="images/avatar_1 1.svg", alt="1")
                         h6 Привет, Кодовёнок
                         small.text-muted Выбери чат, чтобы начать общаться
             
