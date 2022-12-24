@@ -4,7 +4,7 @@
         "A": [{
             name: "Алексей Примадонин",
             status: "Онлайн",
-            avatar: "images/Avatar_3.svg"
+            avatar: "images/avatar_3.jpg"
         }],
 
         "В": [{
@@ -45,23 +45,21 @@ html(lang="en")
         link(rel="stylesheet", href="./styles.css")
         title Document
     body.m-4.bg-dark 
-        .container-xxl.container-fluid.rounded-3.bg-white          
-            .row  
-                .col-4.px-0  
-                    include header.pug
+        .container-xxl.container-fluid.rounded-3.overflow-hidden.bg-white          
             .row 
-                .col-4 
-                    aside 
-                            h2.py-5.px-4 Контакты
-                            p.text-muted Поиск по контактам
+                .col-4.border-end.px-0
+                    include header.pug  
+                    aside.px-4.pb-5 
+                        h2.mt-5.mb-4 Контакты
+                        input.px-4.w-100.border-0.border-bottom(style="height: 72px;", placeholder="Поиск по контактам") 
                         each people, letter in contacts
-                        h6= letter
-                    .card
-                        .card-body
-                        img(src="contact.avatar", alt="1")
-                            each contact in people
-                                h6.card-title= contact.name
-                                p.card-text.small.text-mited= contact.status        
+                            p.mb-3.text-muted.mt-5= letter
+                            each contact, index in people
+                                .d-flex.gap-3.align-items-center.px-3.py-4.border-bottom 
+                                    img.rounded-circle(src= contact.avatar, alt= contact.name, style="width: 50px; height: 50px;")
+                                    div 
+                                        h6.card-title= contact.name
+                                        p.card-text.small.text-muted= contact.status        
                 .col-4.m-auto 
                     main   
                         img(src="images/avatar_1 1.svg", alt="1")

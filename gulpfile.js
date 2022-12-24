@@ -22,7 +22,7 @@ const styles = () => {
 }
 
 const images = () => {
-  return src('./app/images/*.svg')
+  return src(['./app/images/*.svg','./app/images/*.jpg'])
     .pipe(dest('./build/images'))
 }
 
