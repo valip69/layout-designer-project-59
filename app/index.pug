@@ -49,21 +49,21 @@ html(lang="en")
             .row 
                 .col-4.border-end.px-0
                     include header.pug  
-                    aside.px-4.pb-5 
+                    aside.px-4.pb-5#contacts 
                         h2.mt-5.mb-4 Контакты
                         input.px-4.w-100.border-0.border-bottom(style="height: 72px;", placeholder="Поиск по контактам") 
                         each people, letter in contacts
                             p.mb-3.text-muted.mt-5= letter
                             each contact, index in people
-                                .d-flex.gap-3.align-items-center.px-3.py-4.border-bottom 
+                                .d-flex.gap-3.px-3.py-4.border-bottom 
                                     img.rounded-circle(src= contact.avatar, alt= contact.name, style="width: 50px; height: 50px;")
                                     div 
-                                        h6.card-title= contact.name
-                                        p.card-text.small.text-muted= contact.status        
+                                        h6= contact.name
+                                        p.small.text-muted= contact.status        
                 .col-4.m-auto 
-                    main   
+                    main.text-center   
                         img(src="images/avatar_1 1.svg", alt="1")
-                        h6 Привет, Кодовёнок
+                        h6.mt-3 Привет, Кодовёнок
                         small.text-muted Выбери чат, чтобы начать общаться
             
                         
