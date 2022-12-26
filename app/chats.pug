@@ -1,0 +1,35 @@
+
+//
+-
+    var contacts = [
+          {
+            name: "Вениамин Редакторович",
+            time: "11:45",
+            text: "o_O",
+            avatar: "images/avatar_4.jpg"
+        },
+          {
+            name: "Джедай Падаванов",
+            time: "10:12",
+            text: "Привет, скоро третий проект? Уже скоро ...",
+            avatar: "images/avatar_2.jpg"
+        },
+          {
+            name: "Алексей Примадонин",
+             time: "08:53",
+             text: "Тесты упали >_<",
+             avatar: "images/avatar_3.jpg"
+        },   
+    ]//  
+h2.mt-5.mb-4 Чаты
+input.px-4.w-100.mb-5.border-0.border-bottom(style="height: 72px;", placeholder="Поиск по сообщениям")
+each contact in contacts      
+    .d-flex.gap-3.align-items-center.px-3.py-4.border-bottom 
+        img.rounded-circle(src= contact.avatar, alt= contact.name, style="width: 50px; height: 50px;")
+        div
+            div.nav 
+                h6.me-4.mb-0= contact.name
+                p.small.text-muted.mb-0= contact.time
+            p.small.text-muted.mb-0= contact.text 
+     
+                                

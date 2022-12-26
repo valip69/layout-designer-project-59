@@ -41,12 +41,48 @@ html(lang="en")
                             .d-flex.gap-3.align-items-center.px-3.py-4.border-bottom 
                                 img.rounded-circle(src= contact.avatar, alt= contact.name, style="width: 50px; height: 50px;")
                                 div
-                                    div.nav 
-                                        h6.me-4.mb-0= contact.name
+                                    div.nav.d-flex.justify-content-between 
+                                        h6.me-5.mb-0= contact.name
                                         p.small.text-muted.mb-0= contact.time
-                                    p.small.text-muted.mb-0= contact.text        
-                .col-4.m-auto 
-                    main.text-center   
-                        img(src="images/avatar_1 1.svg", alt="1")
-                        h6.mt-3 Привет, Кодовёнок
-                        small.text-muted Выбери чат, чтобы начать общаться 
+                                    p.small.text-muted.mb-0= contact.text 
+                .col-8
+                    header
+                        div.d-flex.gap-4.align-items-center.border-bottom
+                            img.rounded-circle(src="images/avatar_4.jpg", alt="", style="width: 50px; height: 50px;")
+                            div 
+                                h6.mb-0.mt-4 Вениамин Редакторович 
+                                p.small.text-muted Онлайн                            
+                    main.mt-5    
+                        div.d-flex.gap-4.align-items-end.ms-5.mb-3
+                            img.rounded-circle(src="images/avatar_4.jpg", alt="", style="width: 50px; height: 50px;")
+                            div.shadow-sm.bg-body.rounded.bg-gray.p-4(style="max-width: 558px;") 
+                                h6.mb-1 Вениамин Редакторович 
+                                p.text-dark.border-bottom Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?
+                                p.small.text-muted.mb-0 8 минут назад 
+                        div.d-flex.gap-4.align-items-end.mb-3 
+                            img.rounded-circle(src="images/avatar_1 1.svg", alt="", style="width: 50px; height: 50px; margin-left: 246px")
+                            div.rounded.bg-primary.p-4(style="max-width: 558px;") 
+                                p.border-bottom Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень
+                                p.small.text-muted.mb-0 8 минут назад                            
+                        div.d-flex.gap-4.align-items-end.ms-5.mb-3
+                            img.rounded-circle(src="images/avatar_4.jpg", alt="", style="width: 50px; height: 50px;")
+                            div.shadow-sm.bg-body.rounded.bg-gray.p-4(style="max-width: 558px;") 
+                                h6.mb-1 Вениамин Редакторович 
+                                p.text-dark.border-bottom Лады
+                                p.small.text-muted.mb-0 5 минут назад 
+                        div.d-flex.gap-4.align-items-end.mb-3 
+                            img.rounded-circle(src="images/avatar_1 1.svg", alt="", style="width: 50px; height: 50px; margin-left: 246px")
+                            div.rounded.bg-primary.p-4(style="max-width: 558px;") 
+                                p.text-dark.border-bottom А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие
+                                p.small.text-muted.mb-0 3 минуты назад 
+                        div.d-flex.gap-4.align-items-end.ms-5.mb-3
+                            img.rounded-circle(src="images/avatar_4.jpg", alt="", style="width: 50px; height: 50px;")
+                            div.shadow-sm.bg-body.rounded.bg-gray.p-4(style="max-width: 558px;") 
+                                h6.mb-1 Вениамин Редакторович 
+                                p.text-dark.border-bottom о_О
+                                p.small.text-muted.mb-0 Только что
+                    footer(style="margin-top: 64px;")
+                        form 
+                            input.px-4.w-100(style="height: 72px;", placeholder="Напишите сообщение...")
+                            img.rounded-circle.bg-primary(src="images/cursor.svg", alt="1", style="width: 50px; height: 50px;")    
+                                
