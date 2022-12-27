@@ -1,4 +1,3 @@
-
 //
 -
     var contacts = [
@@ -16,9 +15,9 @@
         },
           {
             name: "Алексей Примадонин",
-             time: "08:53",
-             text: "Тесты упали >_<",
-             avatar: "images/avatar_3.jpg"
+            time: "08:53",
+            text: "Тесты упали >_<",
+            avatar: "images/avatar_3.jpg"
         },   
     ]//
 doctype html
@@ -41,9 +40,9 @@ html(lang="en")
                             .d-flex.gap-3.align-items-center.px-3.py-4.border-bottom 
                                 img.rounded-circle(src= contact.avatar, alt= contact.name, style="width: 50px; height: 50px;")
                                 div
-                                    div 
+                                    div.d-flex 
                                         h6.me-5.mb-0= contact.name
-                                        p.small.text-muted.mb-0= contact.time
+                                        p.small.text-muted.mb-0.ms-auto= contact.time
                                     p.small.text-muted.mb-0= contact.text 
                 .col-8
                     header
