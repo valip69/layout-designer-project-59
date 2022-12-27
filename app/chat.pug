@@ -41,7 +41,7 @@ html(lang="en")
                             .d-flex.gap-3.align-items-center.px-3.py-4.border-bottom 
                                 img.rounded-circle(src= contact.avatar, alt= contact.name, style="width: 50px; height: 50px;")
                                 div
-                                    div.nav.d-flex.justify-content-between 
+                                    div 
                                         h6.me-5.mb-0= contact.name
                                         p.small.text-muted.mb-0= contact.time
                                     p.small.text-muted.mb-0= contact.text 
@@ -82,7 +82,8 @@ html(lang="en")
                                 p.text-dark.border-bottom о_О
                                 p.small.text-muted.mb-0 Только что
                     footer(style="margin-top: 64px;")
-                        form 
+                        form.position-relative 
                             input.px-4.w-100(style="height: 72px;", placeholder="Напишите сообщение...")
-                            img.rounded-circle.bg-primary(src="images/cursor.svg", alt="1", style="width: 50px; height: 50px;")    
+                            button.rounded-circle.btn.btn-primary.position-absolute.end-0.bottom-50
+                                img(src="images/cursor.svg", alt="1", style="width: 20px; height: 20px;")    
                                 
