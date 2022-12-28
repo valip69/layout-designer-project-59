@@ -1,25 +1,3 @@
-//
--
-    var contacts = [
-          {
-            name: "Вениамин Редакторович",
-            time: "11:45",
-            text: "o_O",
-            avatar: "images/avatar_4.jpg"
-        },
-          {
-            name: "Джедай Падаванов",
-            time: "10:12",
-            text: "Привет, скоро третий проект? Уже скоро ...",
-            avatar: "images/avatar_2.jpg"
-        },
-          {
-            name: "Алексей Примадонин",
-            time: "08:53",
-            text: "Тесты упали >_<",
-            avatar: "images/avatar_3.jpg"
-        },   
-    ]//
 doctype html
 html(lang="en")
     head
@@ -27,62 +5,61 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="./styles.css")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous")
         title Document2 
-    body.m-4.bg-dark 
-        .container-xxl.container-fluid.rounded-3.overflow-hidden.bg-white          
-            .row 
-                .col-4.border-end.px-0
-                    include header.pug  
-                    aside.px-4#chats(style="padding-bottom: 515px;")  
-                        h2.mt-5.mb-4 Чаты
-                        input.px-4.w-100.mb-5.border-0.border-bottom(style="height: 72px;", placeholder="Поиск по сообщениям")
-                        each contact in contacts      
-                            .d-flex.gap-3.align-items-center.px-3.py-4.border-bottom 
-                                img.rounded-circle(src= contact.avatar, alt= contact.name, style="width: 50px; height: 50px;")
-                                div
-                                    div.d-flex 
-                                        h6.me-5.mb-0= contact.name
-                                        p.small.text-muted.mb-0.ms-auto= contact.time
-                                    p.small.text-muted.mb-0= contact.text 
-                .col-8
-                    header
-                        div.d-flex.gap-4.align-items-center.border-bottom
-                            img.rounded-circle(src="images/avatar_4.jpg", alt="", style="width: 50px; height: 50px;")
-                            div 
-                                h6.mb-0.mt-4 Вениамин Редакторович 
-                                p.small.text-muted Онлайн                            
-                    main.mt-5    
-                        div.d-flex.gap-4.align-items-end.ms-5.mb-3
-                            img.rounded-circle(src="images/avatar_4.jpg", alt="", style="width: 50px; height: 50px;")
-                            div.shadow-sm.bg-body.rounded.bg-gray.p-4(style="max-width: 558px;") 
-                                h6.mb-1 Вениамин Редакторович 
-                                p.text-dark.border-bottom Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?
-                                p.small.text-muted.mb-0 8 минут назад 
-                        div.d-flex.gap-4.align-items-end.mb-3 
-                            img.rounded-circle(src="images/avatar_1 1.svg", alt="", style="width: 50px; height: 50px; margin-left: 246px")
-                            div.rounded.bg-primary.p-4(style="max-width: 558px;") 
-                                p.border-bottom Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень
-                                p.small.text-muted.mb-0 8 минут назад                            
-                        div.d-flex.gap-4.align-items-end.ms-5.mb-3
-                            img.rounded-circle(src="images/avatar_4.jpg", alt="", style="width: 50px; height: 50px;")
-                            div.shadow-sm.bg-body.rounded.bg-gray.p-4(style="max-width: 558px;") 
-                                h6.mb-1 Вениамин Редакторович 
-                                p.text-dark.border-bottom Лады
-                                p.small.text-muted.mb-0 5 минут назад 
-                        div.d-flex.gap-4.align-items-end.mb-3 
-                            img.rounded-circle(src="images/avatar_1 1.svg", alt="", style="width: 50px; height: 50px; margin-left: 246px")
-                            div.rounded.bg-primary.p-4(style="max-width: 558px;") 
-                                p.text-dark.border-bottom А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие
-                                p.small.text-muted.mb-0 3 минуты назад 
-                        div.d-flex.gap-4.align-items-end.ms-5.mb-3
-                            img.rounded-circle(src="images/avatar_4.jpg", alt="", style="width: 50px; height: 50px;")
-                            div.shadow-sm.bg-body.rounded.bg-gray.p-4(style="max-width: 558px;") 
-                                h6.mb-1 Вениамин Редакторович 
-                                p.text-dark.border-bottom о_О
-                                p.small.text-muted.mb-0 Только что
-                    footer(style="margin-top: 64px;")
-                        form.position-relative 
-                            input.px-4.w-100(style="height: 72px;", placeholder="Напишите сообщение...")
-                            button.rounded-circle.btn.btn-primary.position-absolute.end-0.bottom-50
-                                img(src="images/cursor.svg", alt="1", style="width: 20px; height: 20px;")    
+    body.p-4.bg-dark.overflow-hidden(style="height: 100vh;") 
+        .container-xxl.container-fluid.rounded-3.overflow-hidden.bg-white.h-100          
+            .row.h-100 
+                .col-4.border-end.px-0.overflow-auto.h-100.scrollbar-hidden
+                    include header.pug
+                    aside.px-4.pb-5  
+                        .tab-content
+                            .tab-pane.active.show(id="contacts") 
+                                include contacts.pug
+                            .tab-pane(id="chats") 
+                                include chats.pug
+                            .tab-pane(id="profile") 
+                                include profile.pug 
+                .col-8.overflow-auto.h-100.px-0
+                    div.position-relative
+                        header.sticky-top.bg-white
+                            div.d-flex.gap-4.align-items-center.border-bottom
+                                img.shadow-sm.rounded-circle(src="images/avatar_4.jpg", alt="", style="width: 50px; height: 50px;")
+                                div 
+                                    h6.mb-0.mt-4 Вениамин Редакторович 
+                                    p.small.text-muted Онлайн                            
+                        main.mt-5    
+                            div.d-flex.gap-4.align-items-end.ms-5.mb-3
+                                img.shadow-sm.rounded-circle(src="images/avatar_4.jpg", alt="", style="width: 50px; height: 50px;")
+                                div.shadow-sm.bg-body.rounded.bg-gray.p-4(style="max-width: 558px;") 
+                                    h6.mb-1 Вениамин Редакторович 
+                                    p.text-dark.border-bottom Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?
+                                    p.small.text-muted.mb-0 8 минут назад 
+                            div.d-flex.gap-4.align-items-end.mb-3 
+                                img.shadow-sm.rounded-circle(src="images/avatar_1 1.svg", alt="", style="width: 50px; height: 50px; margin-left: 246px")
+                                div.shadow-sm.rounded.bg-primary.p-4(style="max-width: 558px;") 
+                                    p.border-bottom Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень
+                                    p.small.text-muted.mb-0 8 минут назад                            
+                            div.d-flex.gap-4.align-items-end.ms-5.mb-3
+                                img.shadow-sm.rounded-circle(src="images/avatar_4.jpg", alt="", style="width: 50px; height: 50px;")
+                                div.shadow-sm.bg-body.rounded.bg-gray.p-4(style="max-width: 558px;") 
+                                    h6.mb-1 Вениамин Редакторович 
+                                    p.text-dark.border-bottom Лады
+                                    p.small.text-muted.mb-0 5 минут назад 
+                            div.d-flex.gap-4.align-items-end.mb-3 
+                                img.shadow-sm.rounded-circle(src="images/avatar_1 1.svg", alt="", style="width: 50px; height: 50px; margin-left: 246px")
+                                div.rounded.bg-primary.p-4(style="max-width: 558px;") 
+                                    p.text-dark.border-bottom А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие
+                                    p.small.text-muted.mb-0 3 минуты назад 
+                            div.d-flex.gap-4.align-items-end.ms-5.mb-3
+                                img.shadow-sm.rounded-circle(src="images/avatar_4.jpg", alt="", style="width: 50px; height: 50px;")
+                                div.shadow-sm.bg-body.rounded.bg-gray.p-4(style="max-width: 558px;") 
+                                    h6.mb-1 Вениамин Редакторович 
+                                    p.text-dark.border-bottom о_О
+                                    p.small.text-muted.mb-0 Только что
+                        footer.sticky-bottom.bg-light
+                            form.position-relative   
+                                input.px-4.w-100.border-0.border-top.mb-0(style="height: 89px;", placeholder="Напишите сообщение...")
+                                button.rounded-circle.btn.btn-primary.position-absolute(style="right: 25px; top: 25px;")
+                                    img(src="images/cursor.svg", alt="")    
                                 

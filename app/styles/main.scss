@@ -1,5 +1,8 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
-@import "mixins.scss";
+@import "./mixins.scss";
 @import "variables.scss";
 $theme-colors: map-merge($theme-colors, $custom-theme-colors); 
 $grid-breakpoints: map-merge($grid-breakpoints, $custom-breakpoints);
+.scrollbar-hidden{
+    @include hide-scrollbar(); 
+}
