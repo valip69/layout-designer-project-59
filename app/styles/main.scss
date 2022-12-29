@@ -1,8 +1,45 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
-@import "./mixins.scss";
-@import "variables.scss";
-$theme-colors: map-merge($theme-colors, $custom-theme-colors); 
+@use "sass:map";
+
+@import "mixins";
+@import "variables";
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+$enable-shadows: true;
 $grid-breakpoints: map-merge($grid-breakpoints, $custom-breakpoints);
-.scrollbar-hidden{
+$container-max-widths: map-merge($container-max-widths, $custom-container-max-widths);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.scrollbar-hidden {
     @include hide-scrollbar(); 
+}
+
+.contact {
+    h6 {
+        color: #212529;
+    }
+
+    p {
+        color: map.get($theme-colors, 'secondary') !important;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: map.get($theme-colors, 'primary') !important;
+
+        h6 {
+            color: map.get($theme-colors, 'light') !important;
+        }
+
+        p {
+            color: $gray !important;
+        }
+    }
 }

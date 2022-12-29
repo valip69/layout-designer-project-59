@@ -35,13 +35,15 @@
             avatar: "images/avatar_6.jpg"
         }],
     }
-h2.mt-5.mb-4 Контакты
+
+h2.fw-bold.mb-4 Контакты
 input.px-4.w-100.border-0.border-bottom(style="height: 72px;", placeholder="Поиск по контактам")
 each people, letter in contacts
     p.mb-3.text-muted.mt-5= letter
-    each contact, index in people
-        .d-flex.gap-3.px-3.py-4.border-bottom 
-            img.rounded-circle(src= contact.avatar, alt= contact.name, style="width: 50px; height: 50px;")
-            div 
-                a.h6.text-dark.text-decoration-none( href="")= contact.name
-                p.small.text-muted= contact.status
+    div
+        each contact, index in people
+            a.d-flex.align-items-center.gap-4.px-3.py-4.text-decoration-none.contact.shadow-sm
+                img.rounded-circle(src= contact.avatar, alt= contact.name, style="width: 50px; height: 50px;")
+                div 
+                    h6.m-0.lh-base= contact.name
+                    p.m-0.small= contact.status

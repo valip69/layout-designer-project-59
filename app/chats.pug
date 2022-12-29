@@ -1,6 +1,5 @@
-//
 -
-  var contacts = [
+  var messages = [
         {
           name: "Вениамин Редакторович",
           time: "11:45",
@@ -19,16 +18,18 @@
           text: "Тесты упали >_<",
           avatar: "images/avatar_3.jpg"
       },   
-  ]//  
-h2.mt-5.mb-4 Чаты
+  ]
+
+h2.fw-bold.mb-4 Чаты
 input.px-4.w-100.mb-5.border-0.border-bottom(style="height: 72px;", placeholder="Поиск по сообщениям")
-each contact in contacts      
-  .d-flex.gap-3.align-items-center.px-3.py-4.border-bottom 
-    img.rounded-circle(src= contact.avatar, alt= contact.name, style="width: 50px; height: 50px;")
-    div.flex-grow-1
-      div.d-flex.justify-content-between  
-        h6.me-4.mb-0= contact.name
-        p.small.text-muted.mb-0.ps-4= contact.time
-      p.small.text-muted.mb-0= contact.text 
+div
+  each message in messages      
+    a.d-flex.gap-4.align-items-center.px-3.py-4.shadow-sm.text-decoration-none.mb-3
+      img.rounded-circle(src= message.avatar, alt= message.name, style="width: 50px; height: 50px;")
+      div.flex-grow-1
+        div.d-flex.justify-content-between  
+          h6.text-dark.lh-base.m-0= message.name
+          p.small.m-0(style="color: #ADB5BD")= message.time
+        p.small.text-muted.m-0= message.text 
       
                                 
