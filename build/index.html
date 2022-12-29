@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>Document</title>
+  </head>
+  <body class="h-100 p-4 overflow-hidden" style="background-color: #EFEFEF">
+    <div class="container-xxl container-fluid rounded-4 overflow-hidden bg-white h-100"> 
+      <div class="row h-100"> 
+        <div class="col-12 col-md-4 border-end px-0 overflow-auto h-100 scrollbar-hidden">
+          <header class="p-3 bg-primary text-light sticky-top"> 
+            <div class="d-flex align-items-center"><img class="me-2" alt="Hexlet" src="./images/logo.svg" style="width: 25px; height: 40px">
+              <ul class="nav"> 
+                <li class="nav-item"><a class="nav-link active d-flex align-items-center small text-decoration-none gap-2" href="#contacts" data-bs-toggle="tab" data-bs-target="#contacts"> <img src="images/people.svg" style="width: 25px; height: 25px"><span class="text-light small">Контакты</span></a></li>
+                <li class="nav-item">        <a class="nav-link d-flex align-items-center small text-decoration-none gap-2" href="#chats" data-bs-toggle="tab" data-bs-target="#chats"> <img src="images/chat.svg" style="width: 25px; height: 25px"><span class="text-light small">Сообщения</span></a></li>
+                <li class="nav-item"><a class="nav-link d-flex align-items-center small text-decoration-none gap-2" href="#profile" data-bs-toggle="tab" data-bs-target="#profile"> <img src="images/person.svg" style="width: 25px; height: 25px"><span class="text-light small">Профиль</span></a></li>
+              </ul>
+            </div>
+          </header>
+          <aside class="px-4 pb-5 pt-5">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="contacts"> 
+                <h2 class="fw-bold mb-4">Контакты</h2>
+                <input class="px-4 w-100 border-0 border-bottom" style="height: 72px;" placeholder="Поиск по контактам">
+                <p class="mb-3 text-muted mt-5">A</p>
+                <div><a class="d-flex align-items-center gap-4 px-3 py-4 text-decoration-none contact shadow-sm"><img class="rounded-circle" src="images/avatar_3.jpg" alt="Алексей Примадонин" style="width: 50px; height: 50px;">
+                    <div> 
+                      <h6 class="m-0 lh-base">Алексей Примадонин</h6>
+                      <p class="m-0 small">Онлайн</p>
+                    </div></a>
+                </div>
+                <p class="mb-3 text-muted mt-5">В</p>
+                <div><a class="d-flex align-items-center gap-4 px-3 py-4 text-decoration-none contact shadow-sm"><img class="rounded-circle" src="images/avatar_4.jpg" alt="Вениамин Редакторович" style="width: 50px; height: 50px;">
+                    <div> 
+                      <h6 class="m-0 lh-base">Вениамин Редакторович</h6>
+                      <p class="m-0 small">Онлайн</p>
+                    </div></a>
+                </div>
+                <p class="mb-3 text-muted mt-5">Д</p>
+                <div><a class="d-flex align-items-center gap-4 px-3 py-4 text-decoration-none contact shadow-sm"><img class="rounded-circle" src="images/avatar_2.jpg" alt="Джедай Падаванов" style="width: 50px; height: 50px;">
+                    <div> 
+                      <h6 class="m-0 lh-base">Джедай Падаванов</h6>
+                      <p class="m-0 small">Был онлайн вчера</p>
+                    </div></a>
+                </div>
+                <p class="mb-3 text-muted mt-5">К</p>
+                <div><a class="d-flex align-items-center gap-4 px-3 py-4 text-decoration-none contact shadow-sm"><img class="rounded-circle" src="images/avatar_1.jpg" alt="Кодовёнок Хекслетович" style="width: 50px; height: 50px;">
+                    <div> 
+                      <h6 class="m-0 lh-base">Кодовёнок Хекслетович</h6>
+                      <p class="m-0 small">Был онлайн 3 часа назад</p>
+                    </div></a><a class="d-flex align-items-center gap-4 px-3 py-4 text-decoration-none contact shadow-sm"><img class="rounded-circle" src="images/avatar_5.jpg" alt="Королева Верстальщина" style="width: 50px; height: 50px;">
+                    <div> 
+                      <h6 class="m-0 lh-base">Королева Верстальщина</h6>
+                      <p class="m-0 small">Была онлайн вчера</p>
+                    </div></a>
+                </div>
+                <p class="mb-3 text-muted mt-5">П</p>
+                <div><a class="d-flex align-items-center gap-4 px-3 py-4 text-decoration-none contact shadow-sm"><img class="rounded-circle" src="images/avatar_6.jpg" alt="Питонист Джангович" style="width: 50px; height: 50px;">
+                    <div> 
+                      <h6 class="m-0 lh-base">Питонист Джангович</h6>
+                      <p class="m-0 small">Был онлайн вчера</p>
+                    </div></a>
+                </div>
+              </div>
+              <div class="tab-pane" id="chats"> 
+                <h2 class="fw-bold mb-4">Чаты</h2>
+                <input class="px-4 w-100 mb-5 border-0 border-bottom" style="height: 72px;" placeholder="Поиск по сообщениям">
+                <div><a class="d-flex gap-4 align-items-center px-3 py-4 shadow-sm text-decoration-none mb-3"><img class="rounded-circle" src="images/avatar_4.jpg" alt="Вениамин Редакторович" style="width: 50px; height: 50px;">
+                    <div class="flex-grow-1">
+                      <div class="d-flex justify-content-between"> 
+                        <h6 class="text-dark lh-base m-0">Вениамин Редакторович</h6>
+                        <p class="small m-0" style="color: #ADB5BD">11:45</p>
+                      </div>
+                      <p class="small text-muted m-0">o_O</p>
+                    </div></a><a class="d-flex gap-4 align-items-center px-3 py-4 shadow-sm text-decoration-none mb-3"><img class="rounded-circle" src="images/avatar_2.jpg" alt="Джедай Падаванов" style="width: 50px; height: 50px;">
+                    <div class="flex-grow-1">
+                      <div class="d-flex justify-content-between"> 
+                        <h6 class="text-dark lh-base m-0">Джедай Падаванов</h6>
+                        <p class="small m-0" style="color: #ADB5BD">10:12</p>
+                      </div>
+                      <p class="small text-muted m-0">Привет, скоро третий проект? Уже скоро ...</p>
+                    </div></a><a class="d-flex gap-4 align-items-center px-3 py-4 shadow-sm text-decoration-none mb-3"><img class="rounded-circle" src="images/avatar_3.jpg" alt="Алексей Примадонин" style="width: 50px; height: 50px;">
+                    <div class="flex-grow-1">
+                      <div class="d-flex justify-content-between"> 
+                        <h6 class="text-dark lh-base m-0">Алексей Примадонин</h6>
+                        <p class="small m-0" style="color: #ADB5BD">08:53</p>
+                      </div>
+                      <p class="small text-muted m-0">Тесты упали &gt;_&lt;</p>
+                    </div></a>
+                </div>
+              </div>
+              <div class="tab-pane" id="profile"> 
+                <h2 class="fw-bold mb-4">Профиль</h2>
+                <input class="px-4 w-100 mb-5 border-0 border-bottom" style="height: 72px;" placeholder="Поиск по сообщениям">
+                <div class="px-3 text-center border-0 mb-5" style="padding-top: 2.5rem; padding-bottom: 2.5rem"><img class="rounded-circle mb-2" src="images/avatar_1 1.svg" alt="" style="width: 90px; height: 90px;">
+                  <div class="p-2">
+                    <div class="lh-base fw-bold mb-4">Кодовёнок Хекслетович</div>
+                    <div class="lh-base text-black-50">Милый и скромный помощник начинающих разработчиков. Люблю JavaScript</div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mx-4 px-3 py-2 border-0 border-bottom">
+                  <div>
+                    <p class="small text-black-50 m-0">Страна </p>
+                    <p class="small m-0">Москва, Россия</p>
+                  </div><img src="images/Vector.svg" alt="Страна">
+                </div>
+                <div class="d-flex justify-content-between mx-4 px-3 py-2 border-0 border-bottom">
+                  <div>
+                    <p class="small text-black-50 m-0">Телефон </p>
+                    <p class="small m-0">+7 (499) 123-45-67</p>
+                  </div><img src="images/Vector_2.svg" alt="Телефон">
+                </div>
+                <div class="d-flex justify-content-between mx-4 px-3 py-2 border-0 border-bottom">
+                  <div>
+                    <p class="small text-black-50 m-0">Email </p>
+                    <p class="small m-0">nikita.m@hexlet.io</p>
+                  </div><img src="images/Vector_3.svg" alt="Email">
+                </div>
+                <div class="d-flex justify-content-between mx-4 px-3 py-2 border-0 border-bottom">
+                  <div>
+                    <p class="small text-black-50 m-0">Twitter </p>
+                    <p class="small m-0">@n_mikhaylov</p>
+                  </div><img src="images/Vector_4.svg" alt="Twitter">
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-0 col-md-8 d-flex align-items-center justify-content-center"> 
+          <main class="text-center">  <img class="mb-3" src="images/avatar_1 1.svg" style="width: 200px; height: 200px">
+            <h6 class="fw-bold m-0 lh-base">Привет, Кодовёнок</h6>
+            <div class="small">
+              <div class="small text-muted">Выбери чат, чтобы начать общаться</div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
