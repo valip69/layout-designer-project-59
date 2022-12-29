@@ -6,10 +6,32 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/utilities";
 
 $enable-shadows: true;
 $grid-breakpoints: map-merge($grid-breakpoints, $custom-breakpoints);
 $container-max-widths: map-merge($container-max-widths, $custom-container-max-widths);
+$utilities: map-merge(
+  $utilities,
+  (
+    "border-radius": (
+        responsive: true,
+        property: border-radius,
+        values: (
+            4: 1rem
+        ),
+    ),
+    "border-right": (
+        responsive: true,
+        class: c-border-right,
+        property: border-right,
+        values: (
+            1: 1px solid $gray,
+        )
+    )
+  )
+);
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 

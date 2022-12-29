@@ -1,18 +1,25 @@
-header.p-3.bg-primary.text-light.sticky-top 
-    div.d-flex.align-items-center
-        img.me-2(alt="Hexlet" src="./images/logo.svg" style="width: 25px; height: 40px")
-        ul.nav 
-            li.nav-item
-                a.nav-link.active.d-flex.align-items-center.small.text-decoration-none.gap-2(href="#contacts", data-bs-toggle="tab", data-bs-target="#contacts") 
-                    img(src="images/people.svg" style="width: 25px; height: 25px")
-                    span.text-light.small Контакты
-            li.nav-item         
-                a.nav-link.d-flex.align-items-center.small.text-decoration-none.gap-2(href="#chats", data-bs-toggle="tab", data-bs-target="#chats")  
-                    img(src="images/chat.svg" style="width: 25px; height: 25px") 
-                    span.text-light.small Сообщения
-            li.nav-item
-                a.nav-link.d-flex.align-items-center.small.text-decoration-none.gap-2(href="#profile", data-bs-toggle="tab", data-bs-target="#profile") 
-                    img(src="images/person.svg" style="width: 25px; height: 25px")
-                    span.text-light.small Профиль
+mixin header({ withMessages = false } = { withMessages: false })
+    header.p-3.bg-primary.text-light.fixed-bottom.sticky-md-top 
+        div.d-flex.align-items-center.justify-content-between.justify-content-md-start
+            img.d-none.d-md-block.me-md-2(alt="Hexlet" src="./images/logo.svg" style="width: 25px; height: 40px")
+            img.d-md-none(alt="Hexlet" src="./images/logo-sm.svg" style="width: 15px; height: 25px")
+            ul.nav
+                if withMessages
+                    li.nav-item.d-md-none
+                        a.nav-link.active.d-flex.align-items-center.small.text-decoration-none.gap-2(href="#current-chat", data-bs-toggle="tab", data-bs-target="#current-chat") 
+                            img(src="images/chat-left-text.svg" style="width: 25px; height: 25px")
+                            span.d-none.d-md-block.text-light.small Контакты
+                li.nav-item
+                    a.nav-link.active.d-flex.align-items-center.small.text-decoration-none.gap-2(href="#contacts", data-bs-toggle="tab", data-bs-target="#contacts") 
+                        img(src="images/people.svg" style="width: 25px; height: 25px")
+                        span.d-none.d-md-block.text-light.small Контакты
+                li.nav-item.ms-2.ms-md-0    
+                    a.nav-link.d-flex.align-items-center.small.text-decoration-none.gap-2(href="#chats", data-bs-toggle="tab", data-bs-target="#chats")  
+                        img(src="images/chat.svg" style="width: 25px; height: 25px") 
+                        span.d-none.d-md-block.text-light.small Сообщения
+                li.nav-item.ms-2.ms-md-0
+                    a.nav-link.d-flex.align-items-center.small.text-decoration-none.gap-2(href="#profile", data-bs-toggle="tab", data-bs-target="#profile") 
+                        img(src="images/person.svg" style="width: 25px; height: 25px")
+                        span.d-none.d-md-block.text-light.small Профиль
            
      
