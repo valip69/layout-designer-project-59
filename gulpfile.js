@@ -26,8 +26,29 @@ const images = () => {
     .pipe(dest('./build/images'))
 }
 
+exports.build = (cb) => {
+  const exists = fs.existsSync('./build');
+
+  if (exists) {
+    fs.rmdirSync('./build', { force: true, recursive: true });
+  }
+  
+  fs.mkdirSync('./build');
+
+  styles();
+  images();
+  views();
+
+  cb();
+}
+
 exports.default = () => {
-  fs.rmdirSync('./build', { force: true, recursive: true });
+  const exists = fs.existsSync('./build');
+
+  if (exists) {
+    fs.rmdirSync('./build', { force: true, recursive: true });
+  }
+
   fs.mkdirSync('./build');
 
   browserSync.init({
