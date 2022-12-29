@@ -16,13 +16,13 @@ html.h-100(lang="en")
                     +header({ withMessages: true })
                     aside
                         .tab-content
-                            .tab-pane.active(id="contacts-tab") 
+                            .tab-pane.active(id="contacts") 
                                 include contacts.pug
-                            .tab-pane(id="chats-tab") 
+                            .tab-pane(id="chats") 
                                 include chats.pug
-                            .tab-pane(id="profile-tab") 
+                            .tab-pane(id="profile") 
                                 include profile.pug
-                            .tab-pane(id="current-chat-tab")
+                            .tab-pane(id="current-chat")
                                 include current-chat.pug
                 .d-none.d-md-block.col-md-8.overflow-auto.h-100.px-0
                     include current-chat.pug
