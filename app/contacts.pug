@@ -38,7 +38,7 @@
 
 .pt-5.px-4.pb-5.pb-md-5.mb-5.mb-md-0
     h2.fw-bold.mb-4 Контакты
-    input.px-4.w-100.border-0.border-bottom(style="height: 72px;", placeholder="Поиск по контактам")
+    input.px-4.w-100.border-0.border-bottom.c-border-color-gray.placeholder-secondary(style="height: 72px;", placeholder="Поиск по контактам")
     each people, letter in contacts
         p.mb-3.text-muted.mt-5= letter
         div
@@ -46,5 +46,5 @@
                 a.d-flex.align-items-center.gap-4.px-3.py-4.text-decoration-none.contact.shadow-sm
                     img.rounded-circle(src= contact.avatar, alt= contact.name, style="width: 50px; height: 50px;")
                     div 
-                        h6.m-0.lh-base= contact.name
+                        h6.fw-bold.m-0.lh-base= contact.name
                         p.m-0.small= contact.status 

@@ -8285,6 +8285,10 @@ textarea.form-control-lg {
   border-right: 1px solid #EFEFEF !important;
 }
 
+.c-border-color-gray {
+  border-color: #EFEFEF !important;
+}
+
 @media (min-width: 576px) {
   .float-sm-start {
     float: left !important;
@@ -10849,6 +10853,10 @@ textarea.form-control-lg {
 }
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
+}
+
+.placeholder-secondary::placeholder {
+  color: #6C757D;
 }
 
 .contact h6, .contact .h6 {

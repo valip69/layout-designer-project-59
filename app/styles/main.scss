@@ -29,6 +29,14 @@ $utilities: map-merge(
         values: (
             1: 1px solid $gray,
         )
+    ),
+    "c-border-color-gray": (
+        responsive: false,
+        class: c-border-color,
+        property: border-color,
+        values: (
+            gray: $gray,
+        )
     )
   )
 );
@@ -37,6 +45,10 @@ $utilities: map-merge(
 
 .scrollbar-hidden {
     @include hide-scrollbar(); 
+}
+
+.placeholder-secondary::placeholder {
+    color: map.get($theme-colors, 'secondary');
 }
 
 .contact {
