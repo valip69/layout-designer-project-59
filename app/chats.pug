@@ -25,12 +25,12 @@
   input.px-4.w-100.mb-5.border-0.border-bottom.c-border-color-gray.placeholder-secondary(style="height: 72px;", placeholder="Поиск по сообщениям")
   div
     each message in messages      
-      a.d-flex.gap-4.align-items-center.px-3.py-4.shadow-sm.text-decoration-none.mb-3
+      a.d-flex.gap-4.align-items-center.ps-3.shadow-sm.text-decoration-none.mb-3(style="height: 93px; padding-right: 30px")
         img.rounded-circle(src= message.avatar, alt= message.name, style="width: 50px; height: 50px;")
-        div.flex-grow-1
+        div.flex-grow-1.overflow-hidden
           div.d-flex.justify-content-between  
             h6.fw-bold.text-dark.lh-base.m-0= message.name
             p.small.m-0(style="color: #ADB5BD")= message.time
-          p.small.text-muted.m-0= message.text 
+          p.small.text-muted.m-0.text-truncate= message.text 
       
                                 
