@@ -1,8 +1,6 @@
 @use "sass:map";
-
 @import "mixins";
 @import "variables";
-
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
@@ -10,33 +8,33 @@
 @import "../../node_modules/bootstrap/scss/utilities";
 
 $enable-shadows: true;
-$grid-breakpoints: map-merge($grid-breakpoints, $custom-breakpoints);
-$container-max-widths: map-merge($container-max-widths, $custom-container-max-widths);
-$utilities: map-merge(
+$grid-breakpoints: map.merge($grid-breakpoints, $custom-breakpoints);
+$container-max-widths: map.merge($container-max-widths, $custom-container-max-widths);
+$utilities: map.merge(
   $utilities,
   (
     "border-radius": (
-        responsive: true,
-        property: border-radius,
-        values: (
-            4: 1rem
-        ),
+      responsive: true,
+      property: border-radius,
+      values: (
+        4: 1rem
+      ),
     ),
     "border-right": (
-        responsive: true,
-        class: c-border-right,
-        property: border-right,
-        values: (
-            1: 1px solid $gray,
-        )
+      responsive: true,
+      class: c-border-right,
+      property: border-right,
+      values: (
+        1: 1px solid $gray,
+      )
     ),
     "c-border-color-gray": (
-        responsive: false,
-        class: c-border-color,
-        property: border-color,
-        values: (
-            gray: $gray,
-        )
+      responsive: false,
+      class: c-border-color,
+      property: border-color,
+      values: (
+        gray: $gray,
+      )
     )
   )
 );
@@ -44,36 +42,36 @@ $utilities: map-merge(
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 .scrollbar-hidden {
-    @include hide-scrollbar(); 
+  @include hide-scrollbar;
 }
 
 .placeholder-secondary::placeholder {
-    color: map.get($theme-colors, 'secondary');
+  color: map.get($theme-colors, "secondary");
 }
 
 .contact {
+  h6 {
+    color: #212529;
+  }
+
+  p {
+    color: map.get($theme-colors, "secondary") !important;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &:hover {
+    background-color: map.get($theme-colors, "primary") !important;
+    cursor: pointer;
+
     h6 {
-        color: #212529;
+      color: map.get($theme-colors, "light") !important;
     }
 
     p {
-        color: map.get($theme-colors, 'secondary') !important;
+      color: $gray !important;
     }
-
-    &:not(:last-child) {
-        margin-bottom: 1rem;
-    }
-
-    &:hover {
-        cursor: pointer;
-        background-color: map.get($theme-colors, 'primary') !important;
-
-        h6 {
-            color: map.get($theme-colors, 'light') !important;
-        }
-
-        p {
-            color: $gray !important;
-        }
-    }
+  }
 }
