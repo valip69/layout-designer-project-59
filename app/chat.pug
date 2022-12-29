@@ -10,7 +10,7 @@ html(lang="en")
     body.p-4.bg-dark.overflow-hidden(style="height: 100vh;") 
         .container-xxl.container-fluid.rounded-3.overflow-hidden.bg-white.h-100          
             .row.h-100 
-                .col-4.border-end.px-0.overflow-auto.h-100.scrollbar-hidden
+                .col-12.col-md-4.border-end.px-0.overflow-auto.h-100.scrollbar-hidden
                     include header.pug
                     aside.px-4.pb-5  
                         .tab-content
@@ -20,7 +20,7 @@ html(lang="en")
                                 include chats.pug
                             .tab-pane(id="profile") 
                                 include profile.pug 
-                .col-8.overflow-auto.h-100.px-0
+                .col-0.col-md-8.overflow-auto.h-100.px-0
                     div.position-relative
                         header.sticky-top.bg-white
                             div.d-flex.gap-4.align-items-center.border-bottom
