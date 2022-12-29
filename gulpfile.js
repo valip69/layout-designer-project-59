@@ -6,7 +6,7 @@ const pug = require('gulp-pug');
 const browserSync = require('browser-sync').create();
 
 const views = () => {
-  return src('./app/*.pug')
+  return src(['./app/index.pug', './app/chat.pug'])
     .pipe(pug({
         pretty: true,
     }))
