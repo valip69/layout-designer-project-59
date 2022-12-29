@@ -14,7 +14,7 @@ const views = () => {
 }
 
 const styles = () => {
-  return src('./app/styles/*.scss')
+  return src('./app/scss/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('styles.css'))
     .pipe(dest('./build'))
@@ -57,7 +57,7 @@ exports.default = () => {
     }
   });
 
-  watch('./app/styles/*.scss', { ignoreInitial: false }, styles);
+  watch('./app/scss/*.scss', { ignoreInitial: false }, styles);
   watch('./app/*.pug', { ignoreInitial: false }, views).on('change', browserSync.reload);
   watch('./app/images/*', { ignoreInitial: false }, images).on('change', browserSync.reload);
 }
