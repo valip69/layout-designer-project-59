@@ -10,15 +10,15 @@ mixin header({ withMessages = false } = { withMessages: false })
                             img(src="images/chat-left-text.svg" style="width: 25px; height: 25px")
                             span.d-none.d-md-block.text-light.small Чат
                 li.nav-item
-                    a.nav-link.active.d-flex.align-items-center.small.text-decoration-none.gap-2(href="#contacts", data-bs-toggle="tab")
+                    a.nav-link.active.d-flex.align-items-center.small.text-decoration-none.gap-2(id="contacts-tab", href="#contacts", data-bs-toggle="tab")
                         img(src="images/people.svg" style="width: 25px; height: 25px")
                         span.d-none.d-md-block.text-light.small Контакты
                 li.nav-item.ms-2.ms-md-0    
-                    a.nav-link.d-flex.align-items-center.small.text-decoration-none.gap-2(href="#chats", data-bs-toggle="tab")
+                    a.nav-link.d-flex.align-items-center.small.text-decoration-none.gap-2(id="chats-tab", href="#chats", data-bs-toggle="tab")
                         img(src="images/chat.svg" style="width: 25px; height: 25px") 
                         span.d-none.d-md-block.text-light.small Сообщения
                 li.nav-item.ms-2.ms-md-0
-                    a.nav-link.d-flex.align-items-center.small.text-decoration-none.gap-2(href="#profile", data-bs-toggle="tab")
+                    a.nav-link.d-flex.align-items-center.small.text-decoration-none.gap-2(id="profile-tab", href="#profile", data-bs-toggle="tab")
                         img(src="images/person.svg" style="width: 25px; height: 25px")
                         span.d-none.d-md-block.text-light.small Профиль
            
