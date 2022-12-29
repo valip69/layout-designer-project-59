@@ -1,4 +1,4 @@
-mixin header({ withMessages = false } = { withMessages: false })
+mixin header({ withMessages = false, activeTab = "contacts" } = { withMessages: false, activeTab: "contacts" })
     header.px-4.px-md-3.py-3.py-md-4.bg-primary.text-light.fixed-bottom.sticky-md-top 
         div.d-flex.align-items-center.justify-content-between.justify-content-md-start
             img.d-none.d-md-block.me-md-2(alt="Hexlet" src="./images/logo.svg" style="width: 25px; height: 40px")
@@ -11,13 +11,23 @@ mixin header({ withMessages = false } = { withMessages: false })
                                 img(src="images/chat-left-text.svg" style="width: 25px; height: 25px")
                                 span.d-none.d-md-block.text-light.small Чат
                     li.nav-item
-                        a.nav-link.active.d-flex.align-items-center.small.text-decoration-none.gap-2(href="#contacts", data-bs-toggle="tab")
-                            img(src="images/people.svg" style="width: 25px; height: 25px")
-                            span.d-none.d-md-block.text-light.small Контакты
+                        if activeTab === "contacts"
+                            a.nav-link.active.d-flex.align-items-center.small.text-decoration-none.gap-2(href="#contacts", data-bs-toggle="tab")
+                                img(src="images/people.svg" style="width: 25px; height: 25px")
+                                span.d-none.d-md-block.text-light.small Контакты
+                        else
+                            a.nav-link.d-flex.align-items-center.small.text-decoration-none.gap-2(href="#contacts", data-bs-toggle="tab")
+                                img(src="images/people.svg" style="width: 25px; height: 25px")
+                                span.d-none.d-md-block.text-light.small Контакты
                     li.nav-item.ms-2.ms-md-0    
-                        a.nav-link.d-flex.align-items-center.small.text-decoration-none.gap-2(href="#chats", data-bs-toggle="tab")
-                            img(src="images/chat.svg" style="width: 25px; height: 25px") 
-                            span.d-none.d-md-block.text-light.small Сообщения
+                        if activeTab === "chat"
+                            a.nav-link.active.d-flex.align-items-center.small.text-decoration-none.gap-2(href="#chats", data-bs-toggle="tab")
+                                img(src="images/chat.svg" style="width: 25px; height: 25px") 
+                                span.d-none.d-md-block.text-light.small Сообщения
+                        else
+                            a.nav-link.d-flex.align-items-center.small.text-decoration-none.gap-2(href="#chats", data-bs-toggle="tab")
+                                img(src="images/chat.svg" style="width: 25px; height: 25px") 
+                                span.d-none.d-md-block.text-light.small Сообщения
                     li.nav-item.ms-2.ms-md-0
                         a.nav-link.d-flex.align-items-center.small.text-decoration-none.gap-2(href="#profile", data-bs-toggle="tab")
                             img(src="images/person.svg" style="width: 25px; height: 25px")

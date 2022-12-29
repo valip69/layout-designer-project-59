@@ -13,12 +13,12 @@ html.h-100(lang="en")
         .container-xxl.container-fluid.border-radius-md-4.overflow-hidden.bg-white.h-100      
             .row.h-100 
                 .col-12.col-md-4.c-border-right-md-1.c-color-fancy.px-0.overflow-auto.h-100.scrollbar-hidden
-                    +header({ withMessages: true })
+                    +header({ withMessages: true, activeTab: "chat" })
                     aside
                         .tab-content
-                            .tab-pane.active(id="contacts") 
+                            .tab-pane(id="contacts") 
                                 include contacts.pug
-                            .tab-pane(id="chats") 
+                            .tab-pane.active(id="chats") 
                                 include chats.pug
                             .tab-pane(id="profile") 
                                 include profile.pug
